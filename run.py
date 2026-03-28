@@ -22,11 +22,11 @@ def main():
     try:
         logging.info("Job started")
 
-        # Load config
+        
         with open(args.config, 'r') as f:
             config = yaml.safe_load(f)
 
-        # Validate config
+        
         if not all(k in config for k in ["seed", "window", "version"]):
             raise ValueError("Invalid config structure")
 
@@ -38,7 +38,6 @@ def main():
 
         logging.info(f"Config loaded: {config}")
 
-        # Load data
         df = pd.read_csv(args.input, sep=",", engine="python")
 
         if df.empty:
@@ -49,13 +48,12 @@ def main():
 
         logging.info(f"Rows loaded: {len(df)}")
 
-        # Rolling mean
+       
         df["rolling_mean"] = df["close"].rolling(window=window).mean()
 
-        # Signal
+     
         df["signal"] = (df["close"] > df["rolling_mean"]).astype(int)
 
-        # Remove NaN rows
         df = df.dropna()
 
         rows_processed = len(df)
