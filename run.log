@@ -1,0 +1,21 @@
+INFO:root:Job started
+INFO:root:Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+ERROR:root:[Errno 2] No such file or directory: 'data.csv'
+INFO:root:Job finished
+INFO:root:Job started
+INFO:root:Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+ERROR:root:Missing 'close' column
+INFO:root:Job finished
+INFO:root:Job started
+INFO:root:Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+ERROR:root:Missing 'close' column
+INFO:root:Job finished
+INFO:root:Job started
+INFO:root:Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+ERROR:root:Missing 'close' column
+INFO:root:Job finished
+INFO:root:Job started
+INFO:root:Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+INFO:root:Rows loaded: 10000
+INFO:root:Metrics: {'version': 'v1', 'rows_processed': 9996, 'metric': 'signal_rate', 'value': 0.4991, 'latency_ms': 74, 'seed': 42, 'status': 'success'}
+INFO:root:Job finished
